@@ -1,8 +1,8 @@
 # trueid
 
 1. The google extension is found in the Google Extension folder. ContentScript.js is crossbrowser-compatible.
-2. index.html in the Index folder is the dummy page for our demo, at http://trueid.surge.sh/
-3. The mid folder is where the middle layer (the proxy server for the application) is located.
+2. index.html in the Demo Site folder is the dummy page for our demo, at http://trueid.surge.sh/
+3. The API Server folder is where the middle layer (the proxy server for the application) is located.
 
 ## Problem Statement
 
@@ -19,7 +19,7 @@ The whole process probably takes around 10 seconds and the user only needs to re
 
 Well, the script itself is written in web technologies, nothing fancy about it. It prompts the server to send a push notification to the phone. The server itself is written in Node.js, nothing too fancy about that, just JSON endpoints here and there, secured by a SSL certificate so it comes with a HTTPS connection. The phone application is written in Java, for Android. It stores the password, encrypted of course, and sends it back through to the server, and back to the web extension. 
 
-There's nothing fancy about the application technology itself. It's just made by four guys who got tired of typing passwords every damn time on computer we don't use everyda (hint hint LWN library computers)
+There's nothing fancy about the application technology itself. It's just made by four guys who got tired of typing passwords every damn time on computer we don't use everyday (hint hint LWN library computers)
 
 I do totally recommend [surge](http://surge.sh/) for static hosting though. Braindead simple stuff, if you ask me.
 
