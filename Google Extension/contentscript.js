@@ -32,7 +32,7 @@ $(':password').parent().on('click', function (e) {
       }
       console.log(data, window.location)
       // test
-      data.domain_name = 'trueid.surge.sh'
+      //data.domain_name = 'trueid.surge.sh'
       function get_data (count) {
         if (!count) count = 0
         var timeout = 30
@@ -40,10 +40,9 @@ $(':password').parent().on('click', function (e) {
         console.log(count)
         $.ajax({
           type: 'GET',
-          url: 'http://localhost:3000/api/message',
+          url: 'https://www.im-ju.xyz/api/message',
           data: data,
           success: function (data) {
-            console.log(data)
             if (data.error && count < timeout) {
               console.log('?')
               setTimeout(function () {get_data(count)}, 1000)
@@ -56,10 +55,11 @@ $(':password').parent().on('click', function (e) {
               notie.alert('success', 'Success! Loading...!')
               $('#trueid-console-username').text(data.username)
               $('#trueid-console-password').text(data.password)
+              //console.log(data)
               var s
               $(':password').parent().children().each(function () {
                 var _o = $(this).outerHTML()
-                var _u = _o.match(/user.?name|email/gi)
+                var _u = _o.match(/user.?name|email|login/gi)
                 var _p = _o.match(/pass.?word/gi)
                 var _s = _o.match(/submit/gi)
                 console.log(_s)
@@ -82,7 +82,7 @@ $(':password').parent().on('click', function (e) {
       }
       $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/api',
+        url: 'https://www.im-ju.xyz/api',
         data: data,
         success: function (data) {
           if (!data.error) {
