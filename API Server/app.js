@@ -5,6 +5,17 @@ var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 var compress = require('compression')
 
+var PATH_TO_CERT = '/root/im-ju.xyz.crt';
+var PATH_TO_KEY = '/root/im-ju.xyz.d.key';
+var https = require('https');
+    var fs = require('fs');
+
+    var options = {
+      // ca: [fs.readFileSync(PATH_TO_BUNDLE_CERT_1), fs.readFileSync(PATH_TO_BUNDLE_CERT_2)],
+      cert: fs.readFileSync(PATH_TO_CERT),
+      key: fs.readFileSync(PATH_TO_KEY)
+    };
+
 var app = express()
 
 // express app setup
@@ -44,5 +55,12 @@ app.use(function (err, req, res, next) {
     error: {}
   })
 })
+
+var server = https.createServer(options, app);
+
+    server.listen(443, function(){
+        console.log("server running at https://IP_ADDRESS:443/")
+    });
+
 
 module.exports = app

@@ -6,7 +6,7 @@ var request = require('superagent')
 
 /* config vars */
 var dburl = 'mongodb://localhost/trueid'
-var apikey = 'YOUR API KEY HERE'//
+var apikey = 'AIzaSyCOckHIbL7cYUnPUYVc_B_TYtjga_rbvWo'//
 
 /* Simple Schema */
 var modelSchema = mongoose.Schema({
@@ -47,6 +47,7 @@ router.get('/', function (req, res, next) {
           res.send({'error': err})
           return false
         }
+	console.log(result);
         // We then do a push notification here
         if (result) {
           request
@@ -64,6 +65,7 @@ router.get('/', function (req, res, next) {
               }
             })
             .end(function (err, response) {
+		console.log(response);
               // var m_id = JSON.parse(response.text).results[0].message_id
               if (err) {
                 mongoose.disconnect()
