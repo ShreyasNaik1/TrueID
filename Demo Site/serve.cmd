@@ -1,0 +1,1 @@
+surge ./ trueid.surge.sh
