@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1053746826448",
+    "firebase_url": "https://trueid-e6b9a.firebaseio.com",
+    "project_id": "trueid-e6b9a",
+    "storage_bucket": "trueid-e6b9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053746826448:android:ff5abbfe6abb287e",
+        "android_client_info": {
+          "package_name": "com.trueid.trueid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053746826448-8gmm4qua954lo13ma47k7jsfhaovm83q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAljIv2DPADACR7pyp4-ZXo65AOcMsmoks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

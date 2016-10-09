@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="A PIN has been sent via SMS to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/phoneNum"
+            android:text="8123 4444"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="26dp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:text="Validate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/validateBtn"
+        android:onClick="onValidate"/>
+    <EditText
+        android:layout_above="@+id/validateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/pinTxt"
+        android:gravity="center"/>
+</RelativeLayout>
