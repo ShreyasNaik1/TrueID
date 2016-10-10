@@ -6,7 +6,7 @@ var request = require('superagent')
 
 /* config vars */
 var dburl = 'mongodb://localhost/trueid'
-var apikey = 'AIzaSyCOckHIbL7cYUnPUYVc_B_TYtjga_rbvWo'//
+var apikey = '<firebase>'//
 
 /* Simple Schema */
 var modelSchema = mongoose.Schema({
@@ -208,9 +208,9 @@ router.post('/sms', function(req,res,next){
   if(_data && !_data.secret_key){
     var secret_key=Math.floor(Math.random() * 90000) + 10000
     var data ={
-      email:  "tjunxiang92@gmail.com",
-      password: "tjunxiang92",
-      device: "30764",
+      email:  "<smsgateway>",
+      password: "<smsgateway>",
+      device: "<smsgateway>",
       number: _data.mobile_id,
       message: "Your TrueID authentication number is "+secret_key
     }
