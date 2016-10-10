@@ -1,8 +1,13 @@
-# trueid
+# TrueID
 
 1. The google extension is found in the Google Extension folder. ContentScript.js is crossbrowser-compatible.
 2. index.html in the Demo Site folder is the dummy page for our demo, at http://trueid.surge.sh/
 3. The API Server folder is where the middle layer (the proxy server for the application) is located.
+
+## Find Us
+- Youtube - https://youtu.be/wwTbJOJRAUY
+- DevPost - http://devpost.com/software/trueid
+- iNTUition - http://intuition.devpost.com/submissions
 
 ## Problem Statement
 
