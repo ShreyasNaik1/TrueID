@@ -31,8 +31,6 @@ $(':password').parent().on('click', function (e) {
       }
       console.log(data, window.location)
 
-      // test
-      // data.domain_name = 'trueid.surge.sh'
       function get_data (count) {
         if (!count) count = 0
         var timeout = 30
@@ -43,7 +41,6 @@ $(':password').parent().on('click', function (e) {
           url: 'https://www.im-ju.xyz/api/message',
           data: data,
           success: function (data) {
-            // console.log(data)
             if (data.error && count < timeout) {
               console.log('?')
               setTimeout(function () {get_data(count)}, 1000)
@@ -56,6 +53,7 @@ $(':password').parent().on('click', function (e) {
               notie.alert('success', 'Success! Loading...!')
               $('#trueid-console-username').text(data.username)
               $('#trueid-console-password').text(data.password)
+              //console.log(data)
               var s
               $(':password').parent().children().each(function () {
                 var _o = $(this).outerHTML()
